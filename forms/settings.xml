@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form name="settings">
+    <fieldset name="basic">
+        <field name="mode" type="radio" label="Should upcoming events be displayed automatically"
+               default="all" required="true">
+            <option value="all">Yes, unless explicitly disabled</option>
+            <option value="selected">No, unless explicitly enabled</option>
+        </field>
+        <field name="send_daily" type="checkbox" label="Notify me when my website gets decorated or could be decorated"
+               value="true"/>
+        <field name="auto_off" type="select" label="Automatically turn off effects" default="0" required="true">
+            <option value="0">Never</option>
+            <option value="10">After 10 seconds</option>
+            <option value="30">After 30 seconds</option>
+            <option value="60">After 1 minute</option>
+        </field>
+        <field name="display_limiter" type="select" label="Display decorations once" default="1" required="true">
+            <option value="0">Per each user</option>
+            <option value="1">Per visit</option>
+            <option value="2">Per every page view</option>
+        </field>
+        <field name="button_submit" type="submit" class="btn-success" label="Save changes"/>
+        <field name="advanced_toggler" type="button" class="dfo-toggle-advanced uk-button-link" label="Advanced options" />
+    </fieldset>
+    <fieldset name="advanced">
+        <field name="sync_frequency" type="select" label="Keep data cached for" default="604800" required="true">
+            <option value="43200">12 hours</option>
+            <option value="86400">1 day</option>
+            <option value="172800">2 days</option>
+            <option value="345600">4 days</option>
+            <option value="604800">1 week</option>
+            <option value="1209600">2 weeks</option>
+            <option value="2419200">4 weeks</option>
+        </field>
+        <field name="force_sync" type="button" class="dfo-force-sync uk-button" label="Download data from the service" />
+    </fieldset>
+</form>

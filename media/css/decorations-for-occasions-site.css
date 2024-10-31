@@ -1,0 +1,301 @@
+/**
+ * @version 1.1.4
+ * @package Perfect Decorations For Occasions
+ * @copyright © 2015 Perfect Web sp. z o.o., All rights reserved. http://www.perfect-web.co
+ * @license GNU/GPL http://www.gnu.org/licenses/gpl-3.0.html
+ * @author Mateusz Podraza, Grzegorz Pabian, Andrzej Kawula, Piotr Moćko
+ */
+.perfect-decoration {
+    pointer-events: none;
+    z-index: 1;
+}
+
+.perfect-decorations-cursor {
+    position: absolute;
+}
+
+.perfect-decorations-glued {
+    position: fixed;
+    font-size: 0;
+}
+
+.perfect-decorations-glued.repeat {
+    background-repeat: repeat-x;
+    left: 0;
+    right: 0;
+    background-size: contain;
+}
+
+/*
+*   Left
+*/
+.perfect-decorations-glued.left {
+    left: 0;
+}
+
+.perfect-decorations-glued.left-bottom {
+    left: 0;
+    bottom: 0;
+}
+
+.perfect-decorations-glued.left-top {
+    left: 0;
+    top: 0;
+}
+
+.perfect-decorations-glued.left-middle {
+    left: 0;
+    top: 50%;
+}
+
+/*
+*   Right
+*/
+
+.perfect-decorations-glued.right {
+    right: 0;
+}
+
+.perfect-decorations-glued.right-bottom {
+    right: 0;
+    bottom: 0;
+}
+
+.perfect-decorations-glued.right-top {
+    right: 0;
+    top: 0;
+}
+
+.perfect-decorations-glued.right-middle {
+    right: 0;
+    top: 50%;
+}
+
+/*
+*   Top/bottom
+*/
+.perfect-decorations-glued.top {
+    top: 0;
+}
+
+.perfect-decorations-glued.bottom {
+    bottom: 0;
+}
+
+.perfect-decorations-glued-box {
+    position: fixed;
+    right:20px;
+    top: 50%;
+    z-index: 2;
+
+}
+
+.dfo-bubble{
+    background: #c2ccd1;
+    text-align: center;
+    cursor: pointer;
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    right:0;
+}
+
+.dfo-bubble.dfo-toggler{
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    line-height: 80px;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+    color: #444;
+}
+.dfo-bubble.dfo-info{
+    width: 36px;
+    height: 36px;
+    border-radius: 18px;
+    line-height: 36px;
+    background: #28BDEB;
+    color: #fff;
+    position: relative;
+    top: -20px;
+    left: 40px;
+}
+
+.dfo-info-box{
+    position: absolute;
+    left: -405px;
+    width: 350px;
+    bottom: 100px;
+    background: rgba(255, 255, 255, 0.90);
+    border-radius: 26px;
+    border: 1px solid #bababa;
+    padding: 10px;
+    color:#2d2d2d;
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    display:none;
+}
+@media all and (max-width: 490px) {
+    .dfo-info-box{
+        bottom:125px;
+        max-width:80vw;
+        left:auto;
+        right:10vw;
+    }
+}
+
+.dfo-info-box a {
+    color:rgb(156, 27, 34);
+    text-decoration:none;
+}
+.dfo-info-box a:hover {
+    color:rgb(189, 43, 51);
+    text-decoration:none;
+}
+
+.dfo-small-bubble, .dfo-bigger-bubble{
+    background: rgba(255, 255, 255, 0.90);
+    border: 1px solid #bababa;
+    display: none;
+    position: absolute;
+}
+
+.dfo-small-bubble{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    bottom: 33px;
+    left: -14px;
+}
+
+.dfo-bigger-bubble{
+    width: 52px;
+    height: 52px;
+    border-radius: 26px;
+    bottom: 57px;
+    left: -67px;
+}
+
+.dfo-info-box > p.dfo-header{
+    font-size: 22px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    line-height: 1.35;
+}
+
+.dfo-close{
+    position: absolute;
+    top: -15px;
+    right: -7px;
+    display: block;
+    width: 36px;
+    height: 36px;
+    background: #fff;
+    border-radius: 18px;
+    text-align: center;
+    line-height: 36px;
+    border: 1px solid #bababa;
+}
+
+.dfo-badge{
+    width: 32px;
+    height: 32px;
+    background: url('../img/mini-badge.png') no-repeat;
+    position: absolute;
+    top: -6px;
+    left: -4px;
+}
+
+.dfo-closed .dfo-bubble.dfo-info{
+    display:none;
+}
+.dfo-closed {
+    top:auto;
+    bottom:20px;
+}
+.dfo-closed .dfo-toggler{
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    line-height: 60px;
+}
+.dfo-closed .dfo-badge{
+    top: -9px;
+    left: -9px;
+}
+
+
+.perfect-decoration-flake-holder {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 100000;
+    pointer-events:none;
+}
+
+@-webkit-keyframes fade
+{
+    0%   { opacity: 1; }
+    95%  { opacity: 1; }
+    100% { opacity: 0; }
+}
+@keyframes fade
+{
+    0%   { opacity: 1; }
+    95%  { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@-webkit-keyframes drop
+{
+    0%   { -webkit-transform: translate(0px, -50px); }
+    100% { -webkit-transform: translate(0px, 1200px); }
+}
+@keyframes drop
+{
+    0%   { transform: translate(0px, -50px); }
+    100% { transform: translate(0px, 1200px); }
+}
+
+@-webkit-keyframes clockwiseSpin
+{
+    0%   { -webkit-transform: rotate(-50deg); }
+    100% { -webkit-transform: rotate(50deg); }
+}
+
+@keyframes clockwiseSpin
+{
+    0%   { transform: rotate(-50deg); }
+    100% { transform: rotate(50deg); }
+}
+@-webkit-keyframes counterclockwiseSpinAndFlip
+{
+    0%   { -webkit-transform: scale(-1, 1) rotate(50deg); }
+    100% { -webkit-transform: scale(-1, 1) rotate(-50deg); }
+}
+@keyframes counterclockwiseSpinAndFlip
+{
+    0%   { transform: scale(-1, 1) rotate(50deg); }
+    100% { transform: scale(-1, 1) rotate(-50deg); }
+}
+.perfect-decorations-flake-2
+{
+    position: absolute;
+    -webkit-animation-iteration-count: infinite, infinite;
+    -webkit-animation-direction: normal, normal;
+    -webkit-animation-timing-function: linear, ease-in;
+
+    animation-iteration-count: infinite, infinite;
+    animation-direction: normal, normal;
+    animation-timing-function: linear, ease-in;
+}
+.perfect-decorations-flake-2 > img {
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-transform-origin: 50% -100%;
+
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    transform-origin: 50% -100%;
+}
